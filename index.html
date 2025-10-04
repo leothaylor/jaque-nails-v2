@@ -14,7 +14,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://leothaylor.github.io/jaque-nails-v2/" />
 
-  <!-- LocalBusiness Schema (SEO local) -->
+  <!-- LocalBusiness Schema (SEO local) — TODO: troque o endereço real -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -25,10 +25,10 @@
     "telephone": "+55-21-96767-1257",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Exemplo, 123",
-      "addressLocality": "Rio de Janeiro",
-      "addressRegion": "RJ",
-      "postalCode": "00000-000",
+      "streetAddress": "Rua Exemplo, 123",          /* TODO */
+      "addressLocality": "Rio de Janeiro",          /* TODO */
+      "addressRegion": "RJ",                        /* TODO */
+      "postalCode": "00000-000",                    /* TODO */
       "addressCountry": "BR"
     },
     "priceRange": "$$",
@@ -43,23 +43,18 @@
   <script defer data-domain="leothaylor.github.io" src="https://plausible.io/js/script.js"></script>
 
   <!-- Ícones (Font Awesome) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    referrerpolicy="no-referrer"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer"/>
 
   <!-- Fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+
+  <!-- Favicon — subir assets/img/favicon.ico -->
+  <link rel="icon" href="assets/img/favicon.ico"/>
 
   <style>
     :root { --brand: #e11d48; /* rose-600 */ }
-
     body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
     .font-serif { font-family: 'Playfair Display', serif; }
 
@@ -71,7 +66,6 @@
       /* Enquadramento padrão (mobile) - puxa um pouco para cima */
       background-position: center 22%;
     }
-    /* Em telas maiores, mostramos um pouco mais da parte superior (prioriza as unhas) */
     @media (min-width: 768px) { .hero-bg { background-position: center 18%; } }
     @media (min-width: 992px) { .hero-bg { background-position: center 16%; } }
     @media (min-width: 1200px) { .hero-bg { background-position: center 14%; } }
@@ -96,8 +90,9 @@
         <a href="#services" class="hover:text-rose-600">Serviços</a>
         <a href="#pricing"  class="hover:text-rose-600">Valores</a>
         <a href="#portfolio" class="hover:text-rose-600">Portfólio</a>
-        <a href="#about" class="hover:text-rose-600">Sobre</a>
-        <a href="#contact" class="hover:text-rose-600">Contato</a>
+        <a href="#course"    class="hover:text-rose-600">Curso</a>
+        <a href="#about"     class="hover:text-rose-600">Sobre</a>
+        <a href="#contact"   class="hover:text-rose-600">Contato</a>
       </div>
       <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-gray-100" aria-label="Abrir menu">
         <i class="fa-solid fa-bars text-xl"></i>
@@ -108,6 +103,7 @@
         <a href="#services" class="py-2">Serviços</a>
         <a href="#pricing"  class="py-2">Valores</a>
         <a href="#portfolio" class="py-2">Portfólio</a>
+        <a href="#course" class="py-2">Curso</a>
         <a href="#about" class="py-2">Sobre</a>
         <a href="#contact" class="py-2">Contato</a>
       </div>
@@ -208,7 +204,7 @@
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
+  <!-- PORTFÓLIO -->
   <section id="portfolio" class="py-20 bg-gray-50">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center">
@@ -216,17 +212,12 @@
         <p class="text-gray-500 mt-2">Alguns resultados recentes.</p>
       </div>
 
-      <!-- GRID -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         <!-- Item 1 -->
         <figure class="group cursor-pointer" onclick="openModal(1)">
           <div class="overflow-hidden rounded-lg shadow">
-            <img
-              src="assets/img/portfolio/01-thumbnail.jpg"
-              alt="Blindagem na unha natural"
-              loading="lazy"
-              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition"
-            />
+            <img src="assets/img/portfolio/01-thumbnail.jpg" alt="Blindagem na unha natural" loading="lazy"
+                 class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition"/>
           </div>
           <figcaption class="mt-3">
             <h4 class="font-bold text-lg text-gray-900">Blindagem na unha natural</h4>
@@ -237,12 +228,8 @@
         <!-- Item 2 -->
         <figure class="group cursor-pointer" onclick="openModal(2)">
           <div class="overflow-hidden rounded-lg shadow">
-            <img
-              src="assets/img/portfolio/02-thumbnail.jpg"
-              alt="Fibra de vidro – formato europeu"
-              loading="lazy"
-              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition"
-            />
+            <img src="assets/img/portfolio/02-thumbnail.jpg" alt="Fibra de vidro – formato europeu" loading="lazy"
+                 class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition"/>
           </div>
           <figcaption class="mt-3">
             <h4 class="font-bold text-lg text-gray-900">Fibra de vidro – formato europeu</h4>
@@ -253,12 +240,8 @@
         <!-- Item 3 -->
         <figure class="group cursor-pointer" onclick="openModal(3)">
           <div class="overflow-hidden rounded-lg shadow">
-            <img
-              src="assets/img/portfolio/03-thumbnail.jpg"
-              alt="Fibra de vidro – tons terrosos"
-              loading="lazy"
-              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition"
-            />
+            <img src="assets/img/portfolio/03-thumbnail.jpg" alt="Fibra de vidro – tons terrosos" loading="lazy"
+                 class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition"/>
           </div>
           <figcaption class="mt-3">
             <h4 class="font-bold text-lg text-gray-900">Fibra de vidro – tons terrosos</h4>
@@ -272,20 +255,12 @@
   <!-- MODAL -->
   <div id="backdrop" class="fixed inset-0 bg-black/70 hidden items-center justify-center p-4 z-50">
     <div id="modalBox" class="bg-white rounded-xl max-w-3xl w-full shadow-xl modal-enter relative">
-      <button
-        id="closeBtn"
-        class="absolute -top-4 -right-4 h-10 w-10 rounded-full bg-white shadow text-rose-600 text-2xl"
-        aria-label="Fechar modal"
-      >&times;</button>
-
+      <button id="closeBtn" class="absolute -top-4 -right-4 h-10 w-10 rounded-full bg-white shadow text-rose-600 text-2xl" aria-label="Fechar modal">&times;</button>
       <div class="p-6 md:p-8">
         <h3 id="mTitle" class="text-2xl md:text-3xl font-serif font-bold text-gray-900"></h3>
         <p id="mSub" class="text-gray-500 italic mt-1"></p>
-
-        <img id="mImg" src="" alt="Imagem do portfólio" class="w-full rounded-lg mt-5" loading="eager" />
-
+        <img id="mImg" src="" alt="Imagem do portfólio" class="w-full rounded-lg mt-5" loading="eager"/>
         <p id="mDesc" class="mt-4 text-gray-700"></p>
-
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20agendar%20um%20hor%C3%A1rio%20%F0%9F%92%85" target="_blank"
              class="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
@@ -299,6 +274,71 @@
     </div>
   </div>
 
+  <!-- CURSO -->
+  <section id="course" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900">Curso de Nail Designer</h2>
+        <p class="text-gray-600 mt-3">
+          Formação prática focada em atendimento profissional, biossegurança e técnicas de fibra de vidro/blindagem — do preparo ao acabamento.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="bg-stone-50 rounded-xl p-5 border border-zinc-100">
+          <h4 class="font-semibold text-gray-900 mb-2">Ética & Atendimento</h4>
+          <ul class="text-gray-600 space-y-1 text-sm">
+            <li>• Postura, pontualidade e escuta ativa.</li>
+            <li>• Comunicação acolhedora e profissional.</li>
+            <li>• Limites e temas sensíveis no salão.</li>
+          </ul>
+        </div>
+        <div class="bg-stone-50 rounded-xl p-5 border border-zinc-100">
+          <h4 class="font-semibold text-gray-900 mb-2">Biossegurança</h4>
+          <ul class="text-gray-600 space-y-1 text-sm">
+            <li>• EPIs (touca, luva, máscara, avental).</li>
+            <li>• Higienização de instrumentos e ambiente.</li>
+            <li>• Rotina de limpeza e prevenção.</li>
+          </ul>
+        </div>
+        <div class="bg-stone-50 rounded-xl p-5 border border-zinc-100">
+          <h4 class="font-semibold text-gray-900 mb-2">Técnicas em Fibra</h4>
+          <ul class="text-gray-600 space-y-1 text-sm">
+            <li>• Preparo da unha natural.</li>
+            <li>• Aplicação da fibra e gel base.</li>
+            <li>• Curvatura, capa base e ponto de tensão.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl p-6 border border-zinc-100 shadow-sm">
+          <h4 class="font-semibold text-gray-900 mb-2">O que você vai aprender</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Do acolhimento à entrega: ética, postura e comunicação no atendimento;
+            segurança e higiene; preparo correto da unha; aplicação de fibra de vidro com gel,
+            curvatura e finalização com acabamento profissional.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border border-zinc-100 shadow-sm">
+          <h4 class="font-semibold text-gray-900 mb-2">Para quem é</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Iniciantes que querem começar certo e profissionais que desejam padronizar o serviço,
+            reduzir retrabalho e elevar a satisfação das clientes.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20saber%20mais%20sobre%20o%20curso%20de%20Nail%20Designer%20%F0%9F%92%85"
+           target="_blank"
+           class="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full font-semibold shadow">
+          <i class="fa-brands fa-whatsapp"></i> Falar sobre o Curso
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about" class="py-20">
     <div class="max-w-4xl mx-auto px-6 text-center">
@@ -307,27 +347,6 @@
         Jaqueline Lopes é Nail Designer no J.D Studio Beauty, especialista em fibra de vidro e blindagem.
         Trabalho com técnicas modernas, produtos de qualidade e acabamento impecável para realçar a beleza das suas mãos.
       </p>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="py-16">
-    <div class="max-w-5xl mx-auto px-6">
-      <h3 class="text-3xl font-serif font-bold text-gray-900 text-center">O que as clientes dizem</h3>
-      <div class="grid md:grid-cols-3 gap-6 mt-8">
-        <blockquote class="bg-white p-5 rounded-xl shadow">
-          <p class="italic">“Unhas impecáveis e super naturais. Amei a fibra!”</p>
-          <span class="block mt-3 text-sm text-gray-500">— Bruna S.</span>
-        </blockquote>
-        <blockquote class="bg-white p-5 rounded-xl shadow">
-          <p class="italic">“A Jaque é muito caprichosa. Blindagem durou muito!”</p>
-          <span class="block mt-3 text-sm text-gray-500">— Camila R.</span>
-        </blockquote>
-        <blockquote class="bg-white p-5 rounded-xl shadow">
-          <p class="italic">“Atendimento excelente e resultado perfeito!”</p>
-          <span class="block mt-3 text-sm text-gray-500">— Larissa M.</span>
-        </blockquote>
-      </div>
     </div>
   </section>
 
@@ -360,7 +379,6 @@
 
       <a href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20agendar%20um%20hor%C3%A1rio%20%F0%9F%92%85" target="_blank"
          class="bg-rose-500 hover:bg-rose-600 text-white py-4 px-8 rounded-full text-xl font-bold inline-flex items-center gap-3 transition shadow-lg">
-        <!-- Ícone WhatsApp -->
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.5 0 .19 5.31.19 11.86c0 2.09.55 4.13 1.6 5.94L0 24l6.35-1.67a11.78 11.78 0 0 0 5.71 1.47h.01c6.55 0 11.86-5.31 11.86-11.86a11.84 11.84 0 0 0-3.41-8.46ZM12.07 21.3a9.42 9.42 0 0 1-4.81-1.31l-.35-.2-3.77 1 .99-3.67-.24-.38a9.4 9.4 0 1 1 8.18 4.56Zm5.15-7.03c-.28-.14-1.66-.82-1.92-.91-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.08-.17.18-.33.2-.61.07-.28-.14-1.16-.43-2.2-1.37-.81-.72-1.36-1.6-1.52-1.88-.16-.28-.02-.42.12-.56.13-.13.28-.33.42-.5.14-.17.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48h-.55c-.19 0-.49.07-.75.35-.26.28-.98.96-.98 2.35s1.01 2.73 1.15 2.92c.14.19 1.98 3.03 4.79 4.25.67.29 1.2.46 1.61.59.68.22 1.3.19 1.79.12.55-.08 1.66-.68 1.89-1.33.23-.65.23-1.2.16-1.33-.07-.14-.25-.22-.53-.36Z"/>
         </svg>
@@ -369,16 +387,16 @@
     </div>
   </section>
 
-  <!-- ONDE ATENDO -->
+  <!-- ONDE ATENDO — TODO: troque para o endereço real -->
   <section id="onde-fica" class="py-14 bg-stone-50">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h3 class="text-2xl font-bold mb-2">Onde atendo</h3>
-      <p class="text-gray-600 mb-5">JJD Studio Beauty — Rua Exemplo, 123, Seu Bairro – RJ</p>
+      <p class="text-gray-600 mb-5">
+        JJD Studio Beauty — Rua Exemplo, 123, Seu Bairro – RJ  <!-- TODO -->
+      </p>
       <div class="flex gap-3 justify-center">
-        <a target="_blank" href="https://maps.google.com/?q=Rua%20Exemplo%20123%20RJ"
-           class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-full">Abrir no Google Maps</a>
-        <a target="_blank" href="https://waze.com/ul?q=Rua%20Exemplo%20123%20RJ"
-           class="px-4 py-2 bg-gray-800 hover:bg-black text-white rounded-full">Abrir no Waze</a>
+        <a target="_blank" href="https://maps.google.com/?q=Rua%20Exemplo%20123%20RJ"  class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-full">Abrir no Google Maps</a>
+        <a target="_blank" href="https://waze.com/ul?q=Rua%20Exemplo%20123%20RJ"      class="px-4 py-2 bg-gray-800 hover:bg-black text-white rounded-full">Abrir no Waze</a>
       </div>
     </div>
   </section>
@@ -440,22 +458,18 @@
     function openModal(id) {
       const item = data[id];
       if (!item) return;
-
       mTitle.textContent = item.title;
       mSub.textContent = item.sub || '';
       mImg.src = item.img;
       mImg.alt = item.title;
       mDesc.textContent = item.desc || '';
-
       backdrop.classList.remove('hidden');
-      // animação
       modalBox.classList.remove('modal-leave','modal-leave-active');
       modalBox.classList.add('modal-enter-active');
       document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
-      // animação de saída
       modalBox.classList.remove('modal-enter-active');
       modalBox.classList.add('modal-leave-active');
       setTimeout(() => {
