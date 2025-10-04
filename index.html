@@ -10,11 +10,37 @@
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Jaqueline Lopes — Nail Designer" />
   <meta property="og:description" content="Especialista em Fibra de Vidro e Blindagem no JJD Studio Beauty." />
-  <meta property="og:image" content="assets/img/header-bg.jpg" />
+  <meta property="og:image" content="https://leothaylor.github.io/jaque-nails-v2/assets/img/header-bg.jpg" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://leothaylor.github.io/jaque-nails-v2/" />
+
+  <!-- LocalBusiness Schema (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NailSalon",
+    "name": "Jaqueline Lopes — Nail Designer",
+    "image": "https://leothaylor.github.io/jaque-nails-v2/assets/img/header-bg.jpg",
+    "url": "https://leothaylor.github.io/jaque-nails-v2/",
+    "telephone": "+55-21-96767-1257",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Exemplo, 123",
+      "addressLocality": "Rio de Janeiro",
+      "addressRegion": "RJ",
+      "postalCode": "00000-000",
+      "addressCountry": "BR"
+    },
+    "priceRange": "$$",
+    "sameAs": ["https://www.instagram.com/unhasporjaquelopes/"]
+  }
+  </script>
 
   <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Plausible (analytics leve) — opcional -->
+  <script defer data-domain="leothaylor.github.io" src="https://plausible.io/js/script.js"></script>
 
   <!-- Ícones (Font Awesome) -->
   <link
@@ -32,32 +58,23 @@
   />
 
   <style>
-    :root {
-      --brand: #ec4899; /* pink-500 */
-    }
+    :root { --brand: #e11d48; /* rose-600 */ }
+
     body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
     .font-serif { font-family: 'Playfair Display', serif; }
 
     /* HERO */
-.hero-bg {
-  background-image: url('assets/img/header-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* Enquadramento padrão (mobile) - puxa um pouco para cima */
-  background-position: center 22%;
-}
-
-/* Em telas maiores, mostramos um pouco mais da parte superior (prioriza as unhas) */
-@media (min-width: 768px) {
-  .hero-bg { background-position: center 18%; }
-}
-@media (min-width: 992px) {
-  .hero-bg { background-position: center 16%; }
-}
-@media (min-width: 1200px) {
-  .hero-bg { background-position: center 14%; }
-}
-
+    .hero-bg {
+      background-image: url('assets/img/header-bg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      /* Enquadramento padrão (mobile) - puxa um pouco para cima */
+      background-position: center 22%;
+    }
+    /* Em telas maiores, mostramos um pouco mais da parte superior (prioriza as unhas) */
+    @media (min-width: 768px) { .hero-bg { background-position: center 18%; } }
+    @media (min-width: 992px) { .hero-bg { background-position: center 16%; } }
+    @media (min-width: 1200px) { .hero-bg { background-position: center 14%; } }
 
     /* Modal transitions */
     .modal-enter { opacity: 0; transform: scale(0.98); }
@@ -73,13 +90,14 @@
     <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
       <a href="#" class="text-xl md:text-2xl font-serif font-bold text-gray-900">
         Jaqueline Lopes
-        <span class="text-pink-500">— Nail Designer</span>
+        <span class="text-rose-600">— Nail Designer</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="#services" class="hover:text-pink-500">Serviços</a>
-        <a href="#portfolio" class="hover:text-pink-500">Portfólio</a>
-        <a href="#about" class="hover:text-pink-500">Sobre</a>
-        <a href="#contact" class="hover:text-pink-500">Contato</a>
+        <a href="#services" class="hover:text-rose-600">Serviços</a>
+        <a href="#pricing"  class="hover:text-rose-600">Valores</a>
+        <a href="#portfolio" class="hover:text-rose-600">Portfólio</a>
+        <a href="#about" class="hover:text-rose-600">Sobre</a>
+        <a href="#contact" class="hover:text-rose-600">Contato</a>
       </div>
       <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-gray-100" aria-label="Abrir menu">
         <i class="fa-solid fa-bars text-xl"></i>
@@ -88,6 +106,7 @@
     <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100">
       <div class="px-6 py-3 flex flex-col gap-2 text-gray-700">
         <a href="#services" class="py-2">Serviços</a>
+        <a href="#pricing"  class="py-2">Valores</a>
         <a href="#portfolio" class="py-2">Portfólio</a>
         <a href="#about" class="py-2">Sobre</a>
         <a href="#contact" class="py-2">Contato</a>
@@ -108,7 +127,8 @@
             <a href="#portfolio" class="inline-flex items-center gap-2 bg-white text-gray-900 px-5 py-3 rounded-full hover:bg-gray-100 transition">
               <i class="fa-regular fa-images"></i> Ver Portfólio
             </a>
-            <a href="https://wa.me/5521967671257" target="_blank"
+            <a href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20agendar%20um%20hor%C3%A1rio%20%F0%9F%92%85"
+               target="_blank"
                class="inline-flex items-center gap-2 bg-green-500 text-white px-5 py-3 rounded-full hover:bg-green-600 transition">
               <i class="fa-brands fa-whatsapp"></i> Agendar no WhatsApp
             </a>
@@ -126,9 +146,9 @@
 
       <div class="grid md:grid-cols-2 gap-10 mt-12">
         <div class="px-6">
-          <div class="text-pink-500 mb-4">
+          <div class="text-rose-600 mb-4">
             <span class="fa-stack fa-3x">
-              <i class="fa-solid fa-circle fa-stack-2x text-pink-100"></i>
+              <i class="fa-solid fa-circle fa-stack-2x text-rose-100"></i>
               <i class="fa-solid fa-gem fa-stack-1x"></i>
             </span>
           </div>
@@ -139,9 +159,9 @@
         </div>
 
         <div class="px-6">
-          <div class="text-pink-500 mb-4">
+          <div class="text-rose-600 mb-4">
             <span class="fa-stack fa-3x">
-              <i class="fa-solid fa-circle fa-stack-2x text-pink-100"></i>
+              <i class="fa-solid fa-circle fa-stack-2x text-rose-100"></i>
               <i class="fa-solid fa-shield-halved fa-stack-1x"></i>
             </span>
           </div>
@@ -150,6 +170,40 @@
             Proteção extra e brilho intenso para suas unhas naturais, evitando quebras e lascas.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING (Valores & Duração) -->
+  <section id="pricing" class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <h3 class="text-3xl font-serif font-bold text-center text-gray-900">Valores & Duração</h3>
+      <p class="text-gray-500 text-center mt-2">Transparência nos serviços e no tempo de atendimento.</p>
+
+      <div class="divide-y divide-gray-200 bg-white rounded-xl shadow mt-8">
+        <details class="group p-4">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <span class="font-medium">Fibra de Vidro (alongamento)</span>
+            <span class="text-rose-600 font-semibold">R$ 180 • 2h30</span>
+          </summary>
+          <p class="mt-2 text-gray-600">Acabamento premium + manutenção recomendada a cada 20–30 dias.</p>
+        </details>
+
+        <details class="group p-4">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <span class="font-medium">Blindagem</span>
+            <span class="text-rose-600 font-semibold">R$ 120 • 1h30</span>
+          </summary>
+          <p class="mt-2 text-gray-600">Fortalecimento da unha natural com brilho intenso.</p>
+        </details>
+
+        <details class="group p-4">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <span class="font-medium">Manutenção Fibra</span>
+            <span class="text-rose-600 font-semibold">R$ 140 • 2h</span>
+          </summary>
+          <p class="mt-2 text-gray-600">Reposição/ajuste das extensões e polimento.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -217,10 +271,10 @@
 
   <!-- MODAL -->
   <div id="backdrop" class="fixed inset-0 bg-black/70 hidden items-center justify-center p-4 z-50">
-    <div id="modalBox" class="bg-white rounded-xl max-w-3xl w-full shadow-xl modal-enter">
+    <div id="modalBox" class="bg-white rounded-xl max-w-3xl w-full shadow-xl modal-enter relative">
       <button
         id="closeBtn"
-        class="absolute -top-4 -right-4 h-10 w-10 rounded-full bg-white shadow text-pink-500 text-2xl"
+        class="absolute -top-4 -right-4 h-10 w-10 rounded-full bg-white shadow text-rose-600 text-2xl"
         aria-label="Fechar modal"
       >&times;</button>
 
@@ -233,7 +287,7 @@
         <p id="mDesc" class="mt-4 text-gray-700"></p>
 
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="https://wa.me/5521967671257" target="_blank"
+          <a href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20agendar%20um%20hor%C3%A1rio%20%F0%9F%92%85" target="_blank"
              class="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
             <i class="fa-brands fa-whatsapp"></i> Agendar
           </a>
@@ -256,27 +310,91 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
- <!-- CONTATO -->
-<section id="contact" class="py-20 bg-rose-950 text-rose-50">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-4">CONTATO</h2>
-    <p class="text-rose-200 mb-8">Agende seu horário:</p>
+  <!-- TESTIMONIALS -->
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <h3 class="text-3xl font-serif font-bold text-gray-900 text-center">O que as clientes dizem</h3>
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <blockquote class="bg-white p-5 rounded-xl shadow">
+          <p class="italic">“Unhas impecáveis e super naturais. Amei a fibra!”</p>
+          <span class="block mt-3 text-sm text-gray-500">— Bruna S.</span>
+        </blockquote>
+        <blockquote class="bg-white p-5 rounded-xl shadow">
+          <p class="italic">“A Jaque é muito caprichosa. Blindagem durou muito!”</p>
+          <span class="block mt-3 text-sm text-gray-500">— Camila R.</span>
+        </blockquote>
+        <blockquote class="bg-white p-5 rounded-xl shadow">
+          <p class="italic">“Atendimento excelente e resultado perfeito!”</p>
+          <span class="block mt-3 text-sm text-gray-500">— Larissa M.</span>
+        </blockquote>
+      </div>
+    </div>
+  </section>
 
-    <a href="https://wa.me/5521967671257" target="_blank"
-       class="bg-rose-500 hover:bg-rose-600 text-white py-4 px-8 rounded-full text-xl font-bold inline-flex items-center gap-3 transition shadow-lg">
-      <!-- Ícone WhatsApp -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.5 0 .19 5.31.19 11.86c0 2.09.55 4.13 1.6 5.94L0 24l6.35-1.67a11.78 11.78 0 0 0 5.71 1.47h.01c6.55 0 11.86-5.31 11.86-11.86a11.84 11.84 0 0 0-3.41-8.46ZM12.07 21.3a9.42 9.42 0 0 1-4.81-1.31l-.35-.2-3.77 1 .99-3.67-.24-.38a9.4 9.4 0 1 1 8.18 4.56Zm5.15-7.03c-.28-.14-1.66-.82-1.92-.91-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.08-.17.18-.33.2-.61.07-.28-.14-1.16-.43-2.2-1.37-.81-.72-1.36-1.6-1.52-1.88-.16-.28-.02-.42.12-.56.13-.13.28-.33.42-.5.14-.17.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48h-.55c-.19 0-.49.07-.75.35-.26.28-.98.96-.98 2.35s1.01 2.73 1.15 2.92c.14.19 1.98 3.03 4.79 4.25.67.29 1.2.46 1.61.59.68.22 1.3.19 1.79.12.55-.08 1.66-.68 1.89-1.33.23-.65.23-1.2.16-1.33-.07-.14-.25-.22-.53-.36Z"/>
-      </svg>
-      (21) 96767-1257
-    </a>
-  </div>
-</section>
+  <!-- FAQ -->
+  <section class="py-16 bg-stone-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <h3 class="text-3xl font-serif font-bold text-center text-gray-900">Dúvidas Frequentes</h3>
+      <div class="space-y-3 mt-8">
+        <details class="bg-white p-4 rounded-lg shadow">
+          <summary class="font-medium cursor-pointer">Como funciona a remarcação?</summary>
+          <p class="mt-2 text-gray-600">Avise com 24h de antecedência. Remarcações em menos de 24h podem gerar taxa.</p>
+        </details>
+        <details class="bg-white p-4 rounded-lg shadow">
+          <summary class="font-medium cursor-pointer">Há sinal de agendamento?</summary>
+          <p class="mt-2 text-gray-600">Sinal de R$ 30 via Pix para confirmar o horário (abatido do valor no dia).</p>
+        </details>
+        <details class="bg-white p-4 rounded-lg shadow">
+          <summary class="font-medium cursor-pointer">Atrasos e tolerância</summary>
+          <p class="mt-2 text-gray-600">Tolerância de 10 minutos. Após isso o horário pode ser reagendado.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contact" class="py-20 bg-rose-950 text-rose-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">CONTATO</h2>
+      <p class="text-rose-200 mb-8">Agende seu horário:</p>
+
+      <a href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20agendar%20um%20hor%C3%A1rio%20%F0%9F%92%85" target="_blank"
+         class="bg-rose-500 hover:bg-rose-600 text-white py-4 px-8 rounded-full text-xl font-bold inline-flex items-center gap-3 transition shadow-lg">
+        <!-- Ícone WhatsApp -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.5 0 .19 5.31.19 11.86c0 2.09.55 4.13 1.6 5.94L0 24l6.35-1.67a11.78 11.78 0 0 0 5.71 1.47h.01c6.55 0 11.86-5.31 11.86-11.86a11.84 11.84 0 0 0-3.41-8.46ZM12.07 21.3a9.42 9.42 0 0 1-4.81-1.31l-.35-.2-3.77 1 .99-3.67-.24-.38a9.4 9.4 0 1 1 8.18 4.56Zm5.15-7.03c-.28-.14-1.66-.82-1.92-.91-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.08-.17.18-.33.2-.61.07-.28-.14-1.16-.43-2.2-1.37-.81-.72-1.36-1.6-1.52-1.88-.16-.28-.02-.42.12-.56.13-.13.28-.33.42-.5.14-.17.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48h-.55c-.19 0-.49.07-.75.35-.26.28-.98.96-.98 2.35s1.01 2.73 1.15 2.92c.14.19 1.98 3.03 4.79 4.25.67.29 1.2.46 1.61.59.68.22 1.3.19 1.79.12.55-.08 1.66-.68 1.89-1.33.23-.65.23-1.2.16-1.33-.07-.14-.25-.22-.53-.36Z"/>
+        </svg>
+        (21) 96767-1257
+      </a>
+    </div>
+  </section>
+
+  <!-- ONDE ATENDO -->
+  <section id="onde-fica" class="py-14 bg-stone-50">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h3 class="text-2xl font-bold mb-2">Onde atendo</h3>
+      <p class="text-gray-600 mb-5">JJD Studio Beauty — Rua Exemplo, 123, Seu Bairro – RJ</p>
+      <div class="flex gap-3 justify-center">
+        <a target="_blank" href="https://maps.google.com/?q=Rua%20Exemplo%20123%20RJ"
+           class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-full">Abrir no Google Maps</a>
+        <a target="_blank" href="https://waze.com/ul?q=Rua%20Exemplo%20123%20RJ"
+           class="px-4 py-2 bg-gray-800 hover:bg-black text-white rounded-full">Abrir no Waze</a>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="py-6 text-center text-gray-500">
     <p>&copy; <span id="year"></span> Jaqueline Lopes — Nail Designer. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20agendar%20um%20hor%C3%A1rio%20%F0%9F%92%85"
+     class="fixed bottom-5 right-5 z-50 bg-rose-600 hover:bg-rose-700 text-white rounded-full shadow-lg px-4 py-3 flex items-center gap-2"
+     aria-label="Agendar no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.06 0C5.46 0 .06 5.4.06 12a11.86 11.86 0 0 0 1.74 6.12L0 24l6-1.92A11.88 11.88 0 0 0 12.06 24c6.6 0 12-5.4 12-12 0-3.2-1.26-6.18-3.54-8.52Z"/></svg>
+    Agendar
+  </a>
 
   <!-- SCRIPT -->
   <script>
