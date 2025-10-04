@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jaqueline Lopes — Nail Designer</title>
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fontes/Ícones (opcional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    .hero-bg{
+      background-image:url('assets/img/header-bg.jpg');
+      background-size:cover;background-position:center;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-700">
+
+  <!-- NAV -->
+  <nav class="bg-white/80 backdrop-blur sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a class="text-xl font-bold text-gray-800">Jaqueline Lopes</a>
+      <div class="hidden md:flex gap-6">
+        <a href="#services" class="hover:text-pink-500">Serviços</a>
+        <a href="#portfolio" class="hover:text-pink-500">Portfólio</a>
+        <a href="#about" class="hover:text-pink-500">Sobre</a>
+        <a href="#contact" class="hover:text-pink-500">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-bg h-[60vh] md:h-[80vh] flex items-center justify-center text-center">
+    <div class="bg-black/40 text-white px-6 py-8 rounded">
+      <h1 class="text-4xl md:text-6xl font-bold mb-2">Jaqueline Lopes</h1>
+      <p class="text-lg md:text-2xl">Especialista em Fibra de Vidro e Blindagem</p>
+    </div>
+  </header>
+
+  <!-- SERVIÇOS -->
+  <section id="services" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">SERVIÇOS</h2>
+      <p class="text-gray-500 mb-10">Especialista em Fibra de Vidro e Blindagem.</p>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <div class="text-pink-500 mb-4"><i class="fa-solid fa-gem fa-3x"></i></div>
+          <h3 class="text-2xl font-bold mb-2">Fibra de Vidro</h3>
+          <p>Alongamento resistente e com aspecto natural.</p>
+        </div>
+        <div>
+          <div class="text-pink-500 mb-4"><i class="fa-solid fa-shield-halved fa-3x"></i></div>
+          <h3 class="text-2xl font-bold mb-2">Blindagem</h3>
+          <p>Proteção extra e brilho intenso para unhas naturais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section id="portfolio" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-3 text-center">PORTFÓLIO</h2>
+      <p class="text-gray-500 mb-10 text-center">Alguns resultados recentes.</p>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- 1 -->
+        <figure class="group cursor-pointer" onclick="openModal(1)">
+          <div class="overflow-hidden rounded-lg shadow">
+            <img src="assets/img/portfolio/01-thumbnail.jpg" alt="Blindagem"
+                 class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" />
+          </div>
+          <figcaption class="mt-3">
+            <h4 class="font-bold text-lg">Blindagem na unha natural</h4>
+            <p class="text-gray-500 text-sm">Proteção e brilho duradouros</p>
+          </figcaption>
+        </figure>
+
+        <!-- 2 -->
+        <figure class="group cursor-pointer" onclick="openModal(2)">
+          <div class="overflow-hidden rounded-lg shadow">
+            <img src="assets/img/portfolio/02-thumbnail.jpg" alt="Fibra formato europeu"
+                 class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" />
+          </div>
+          <figcaption class="mt-3">
+            <h4 class="font-bold text-lg">Fibra de vidro – formato europeu</h4>
+            <p class="text-gray-500 text-sm">Alongamento elegante e resistente</p>
+          </figcaption>
+        </figure>
+
+        <!-- 3 -->
+        <figure class="group cursor-pointer" onclick="openModal(3)">
+          <div class="overflow-hidden rounded-lg shadow">
+            <img src="assets/img/portfolio/03-thumbnail.jpg" alt="Tons terrosos"
+                 class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition" />
+          </div>
+          <figcaption class="mt-3">
+            <h4 class="font-bold text-lg">Fibra de vidro – tons terrosos</h4>
+            <p class="text-gray-500 text-sm">Acabamento clássico</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center p-4 z-50">
+    <div class="bg-white max-w-3xl w-full rounded-lg overflow-hidden">
+      <div class="flex justify-between items-center px-6 py-4 border-b">
+        <h3 id="modalTitle" class="text-xl font-bold"></h3>
+        <button onclick="closeModal()" class="text-2xl leading-none">&times;</button>
+      </div>
+      <img id="modalImg" class="w-full max-h-[75vh] object-contain bg-black/5" alt="">
+      <div class="px-6 py-4 text-sm text-gray-600" id="modalDesc"></div>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section id="about" class="py-16">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">SOBRE</h2>
+      <p class="text-gray-600">
+        Jaqueline Lopes é Nail Designer no JJD Studio Beauty, especialista em fibra de vidro.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contact" class="py-16 bg-gray-800 text-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">CONTATO</h2>
+      <a class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full font-semibold"
+         href="https://wa.me/5521967671257" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> (21) 96767-1257
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-white py-6 text-center text-gray-500">
+    <p>&copy; <span id="year"></span> Jaqueline Lopes.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const data = {
+      1:{title:'Blindagem na unha natural', img:'assets/img/portfolio/01-full.jpg',
+         desc:'Técnica de blindagem para fortalecer e dar brilho.'},
+      2:{title:'Fibra de vidro – formato europeu', img:'assets/img/portfolio/02-full.jpg',
+         desc:'Alongamento em fibra de vidro com curvatura europeia.'},
+      3:{title:'Fibra de vidro – tons terrosos', img:'assets/img/portfolio/03-full.jpg',
+         desc:'Paleta nude/terrosa com acabamento clássico.'}
+    };
+
+    function openModal(id){
+      const m=document.getElementById('modal');
+      document.getElementById('modalTitle').textContent=data[id].title;
+      document.getElementById('modalImg').src=data[id].img;
+      document.getElementById('modalDesc').textContent=data[id].desc;
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+      document.body.style.overflow='hidden';
+    }
+    function closeModal(){
+      const m=document.getElementById('modal');
+      m.classList.add('hidden');
+      m.classList.remove('flex');
+      document.body.style.overflow='auto';
+    }
+    document.getElementById('modal').addEventListener('click',e=>{
+      if(e.target.id==='modal') closeModal();
+    });
+  </script>
+</body>
+</html>
