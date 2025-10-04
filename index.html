@@ -39,12 +39,25 @@
     .font-serif { font-family: 'Playfair Display', serif; }
 
     /* HERO */
-    .hero-bg {
-      background-image: url('assets/img/header-bg.jpg');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+.hero-bg {
+  background-image: url('assets/img/header-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Enquadramento padrão (mobile) - puxa um pouco para cima */
+  background-position: center 22%;
+}
+
+/* Em telas maiores, mostramos um pouco mais da parte superior (prioriza as unhas) */
+@media (min-width: 768px) {
+  .hero-bg { background-position: center 18%; }
+}
+@media (min-width: 992px) {
+  .hero-bg { background-position: center 16%; }
+}
+@media (min-width: 1200px) {
+  .hero-bg { background-position: center 14%; }
+}
+
 
     /* Modal transitions */
     .modal-enter { opacity: 0; transform: scale(0.98); }
