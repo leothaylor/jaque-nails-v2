@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leothaylor.github.io/jaque-nails-v2/sitemap.xml
