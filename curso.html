@@ -1,281 +1,58 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Curso de Nail Designer — Jaqueline Lopes</title>
-
-  <!-- Favicon -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F7F3EF">
+  <title>Cursos | Jaque Lopes</title>
+  <meta name="description" content="Formação presencial de Nail Design com Jaque Lopes para iniciantes: base profissional, biossegurança, fibra de vidro, acabamento e atendimento.">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-  <link rel="alternate icon" href="assets/img/favicon.ico">
-
-  <meta name="description"
-        content="Curso prático de Nail Designer com foco em fibra de vidro e blindagem. Ética, biossegurança, preparo, aplicação e acabamento impecável. Instrutora: Jaqueline Lopes." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Curso de Nail Designer — Jaqueline Lopes" />
-  <meta property="og:description"
-        content="Formação prática com foco em fibra de vidro e blindagem. Ética, biossegurança, preparo, aplicação e acabamento impecável." />
-  <meta property="og:image" content="https://leothaylor.github.io/jaque-nails-v2/assets/img/header-bg.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://leothaylor.github.io/jaque-nails-v2/curso.html" />
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome (ícones) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    referrerpolicy="no-referrer"
-  />
-
-  <!-- Fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/v3.css">
 </head>
-  <!-- Favicon -->
-  <link rel="icon" href="assets/img/favicon.ico"/>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="transition-curtain" aria-hidden="true"></div>
+  <div class="nav-wrap"><nav class="nav" aria-label="Navegação principal">
+    <a class="brand" href="index.html" data-transition><span class="brand-mark">JL</span><span>JAQUE LOPES</span></a>
+    <div class="nav-links"><a href="atendimento.html" data-transition>Atendimento</a><a href="curso.html">Cursos</a><a href="index.html#sobre" data-transition>Sobre</a><a href="https://www.instagram.com/unhasporjaquelopes/" target="_blank" rel="noopener">Instagram</a></div>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+    <a class="btn btn-primary" href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20saber%20sobre%20as%20pr%C3%B3ximas%20turmas%20de%20Nail%20Design." target="_blank" rel="noopener">Quero informações <span class="arrow">↗</span></a>
+  </nav></div>
 
-  <style>
-    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-    .font-serif { font-family: 'Playfair Display', serif; }
-    .hero-bg {
-      background-image: url('assets/img/header-bg.jpg');
-      background-size: cover; background-repeat: no-repeat; background-position: center 22%;
-    }
-    @media (min-width: 768px){ .hero-bg{ background-position:center 18%; } }
-    @media (min-width: 992px){ .hero-bg{ background-position:center 16%; } }
-    @media (min-width:1200px){ .hero-bg{ background-position:center 14%; } }
-  </style>
-</head>
-<body class="bg-stone-50 text-zinc-800">
+  <main id="conteudo">
+    <header class="page-hero"><div class="container page-hero-grid">
+      <div><div class="hero-eyebrow">Formação presencial</div><h1>Aprenda com quem vive isso na prática.</h1><p>Uma formação para iniciantes que querem construir base técnica, segurança no processo e compreensão do atendimento profissional — sem pular etapas essenciais.</p><div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20saber%20sobre%20as%20pr%C3%B3ximas%20turmas%20de%20Nail%20Design." target="_blank" rel="noopener">Saber das próximas turmas <span class="arrow">↗</span></a><a class="btn btn-secondary" href="#conteudo-curso">Ver o que é ensinado <span class="arrow">↓</span></a></div></div>
+      <div class="page-hero-aside reveal"><span class="section-kicker">Status atual</span><p>Jaque já realizou formação presencial com alunas e possui apostila e certificados produzidos. Preço, datas, duração e vagas da próxima edição serão confirmados antes de qualquer nova oferta.</p></div>
+    </div></header>
 
-  <!-- NAV -->
-  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
-    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-      <a href="index.html" class="text-xl md:text-2xl font-serif font-bold text-gray-900">
-        Jaqueline Lopes <span class="text-rose-600">— Nail Designer</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="index.html#services"  class="hover:text-rose-600">Serviços</a>
-        <a href="index.html#pricing"   class="hover:text-rose-600">Valores</a>
-        <a href="index.html#portfolio" class="hover:text-rose-600">Portfólio</a>
-        <a href="curso.html"           class="text-rose-600 font-semibold">Curso</a>
-        <a href="index.html#about"     class="hover:text-rose-600">Sobre</a>
-        <a href="index.html#contact"   class="hover:text-rose-600">Contato</a>
-      </div>
-      <a href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Tenho%20interesse%20no%20curso%20de%20Nail%20Designer%20%F0%9F%92%85"
-         target="_blank"
-         class="hidden md:inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded-full">
-        <i class="fa-brands fa-whatsapp"></i> Quero me informar
-      </a>
-    </div>
-  </nav>
+    <section class="section compact"><div class="container"><span class="section-kicker reveal">Prova de execução</span><h2 class="reveal" style="margin-top:18px;max-width:880px">A educadora não é uma promessa futura.</h2><div class="course-proof">
+      <article class="proof-card reveal"><small>01 • presencial</small><h3>Turmas já realizadas</h3><p>Há registro de alunas pagantes e de aulas efetivamente ministradas.</p></article>
+      <article class="proof-card reveal"><small>02 • material</small><h3>Apostila própria</h3><p>Já existe um material-base de curso para iniciantes, que será revisado antes de uma nova edição.</p></article>
+      <article class="proof-card reveal"><small>03 • conclusão</small><h3>Certificados</h3><p>A experiência anterior incluiu certificado e acompanhamento de alunas.</p></article>
+    </div></div></section>
 
-  <!-- HERO (curso) -->
-  <header class="hero-bg h-[46vh] md:h-[56vh] flex items-center">
-    <div class="w-full">
-      <div class="max-w-4xl mx-auto px-6">
-        <div class="bg-black/40 text-white p-8 rounded-lg">
-          <h1 class="font-serif text-4xl md:text-5xl font-bold">Curso de Nail Designer</h1>
-          <p class="mt-3 md:text-xl opacity-90">Fibra de Vidro • Blindagem • Ética • Biossegurança</p>
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a href="#inscricao" class="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white px-5 py-3 rounded-full">
-              <i class="fa-regular fa-calendar-check"></i> Quero me informar
-            </a>
-            <a href="index.html#portfolio" class="inline-flex items-center gap-2 bg-white text-gray-900 px-5 py-3 rounded-full hover:bg-gray-100">
-              <i class="fa-regular fa-images"></i> Ver Portfólio
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+    <section id="conteudo-curso" class="section"><div class="container"><span class="section-kicker reveal">Base da formação</span><h2 class="reveal" style="margin-top:18px;max-width:900px">Do profissionalismo à construção da fibra.</h2><p class="reveal" style="margin-top:20px;color:var(--muted);max-width:740px">A próxima edição será revisada com a Jaque, mas o histórico do curso já mostra uma base consistente de conteúdo.</p><div class="curriculum">
+      <div class="curriculum-item reveal"><span class="num">01</span><div><strong>Ética e postura profissional</strong><p>Pontualidade, responsabilidade e comportamento no atendimento.</p></div></div>
+      <div class="curriculum-item reveal"><span class="num">02</span><div><strong>Comunicação com a cliente</strong><p>Escuta, alinhamento de expectativa e experiência de atendimento.</p></div></div>
+      <div class="curriculum-item reveal"><span class="num">03</span><div><strong>Biossegurança</strong><p>Cuidados de higiene, prevenção e organização do ambiente de trabalho.</p></div></div>
+      <div class="curriculum-item reveal"><span class="num">04</span><div><strong>Preparação da unha</strong><p>Base correta para receber produto e reduzir problemas de execução.</p></div></div>
+      <div class="curriculum-item reveal"><span class="num">05</span><div><strong>Fibra de vidro</strong><p>Aplicação, controle de produto, curvatura e construção da estrutura.</p></div></div>
+      <div class="curriculum-item reveal"><span class="num">06</span><div><strong>Ponto de tensão e acabamento</strong><p>Simetria, resistência e acabamento final com foco profissional.</p></div></div>
+      <div class="curriculum-item reveal"><span class="num">07</span><div><strong>Manutenção e remoção</strong><p>Continuidade do serviço e cuidados com a estrutura ao longo do tempo.</p></div></div>
+      <div class="curriculum-item reveal"><span class="num">08</span><div><strong>Blindagem</strong><p>Técnica que já apareceu historicamente como conteúdo complementar e bônus.</p></div></div>
+    </div></div></section>
 
-  <!-- O QUE ESPERAR -->
-  <section class="py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 border border-zinc-100 shadow-sm">
-          <h3 class="font-serif text-xl font-bold text-gray-900 mb-2">Formação prática</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Aula mão na massa: preparo correto, aplicação da fibra, curvatura, acabamento e atendimento real.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 border border-zinc-100 shadow-sm">
-          <h3 class="font-serif text-xl font-bold text-gray-900 mb-2">Biossegurança</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">EPIs, higienização de instrumentos e ambiente, rotina de limpeza e prevenção.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 border border-zinc-100 shadow-sm">
-          <h3 class="font-serif text-xl font-bold text-gray-900 mb-2">Ética & Atendimento</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Postura profissional, comunicação acolhedora e gestão de expectativas da cliente.</p>
-          <!-- DETALHES DO CURSO -->
-<section id="detalhes" class="py-16">
-  <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 text-center">Detalhes do Curso</h2>
-    <p class="text-gray-500 text-center mt-2">Tudo que você precisa saber: duração, conteúdo, valores e como se inscrever.</p>
+    <section class="section compact"><div class="container callout reveal"><span class="section-kicker" style="color:#E7C9AB">Próxima turma</span><h2 style="margin-top:18px">Sem preço velho, sem data inventada.</h2><p>Esta V3 não publica valores, duração ou número de vagas porque esses pontos ainda serão definidos no checkpoint atual com a Jaque. Quem tiver interesse pode entrar em contato e receber a informação vigente.</p><div class="hero-actions"><a class="btn btn-light" href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20saber%20sobre%20as%20pr%C3%B3ximas%20turmas%20de%20Nail%20Design." target="_blank" rel="noopener">Tenho interesse no presencial <span class="arrow">↗</span></a></div></div></section>
 
-    <div class="grid md:grid-cols-2 gap-6 mt-10">
-      <!-- Duração / Carga horária -->
-      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-        <h3 class="font-bold text-lg text-gray-900">Duração & Carga horária</h3>
-        <ul class="mt-3 space-y-2 text-gray-700">
-          <li>• Formato: presencial (JJD Studio Beauty).</li>
-          <li>• Duração: <strong>1 dia intensivo</strong> (ex.: 8h — pode ajustar).</li>
-          <li>• Carga horária: <strong>8 horas</strong> (teoria + prática).</li>
-          <li>• Turmas reduzidas para acompanhamento próximo.</li>
-        </ul>
-      </div>
+    <section class="section compact"><div class="container split reverse"><div class="copy-block reveal"><span class="section-kicker">Cursos online</span><h2 style="margin-top:18px">A próxima camada, não uma promessa falsa.</h2><p>Já existiram planos para produtos digitais, mas nenhum curso online está sendo anunciado como disponível nesta V3. A área foi preparada para crescer quando houver produto gravado, oferta revisada e processo de venda validado.</p></div><div class="media-card reveal"><img src="assets/img/header-bg.jpg" alt="Jaque Lopes" loading="lazy"></div></div></section>
 
-      <!-- Conteúdo programático (resumo) -->
-      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-        <h3 class="font-bold text-lg text-gray-900">Conteúdo (resumo)</h3>
-        <ul class="mt-3 space-y-2 text-gray-700">
-          <li>• Ética, atendimento e comunicação profissional.</li>
-          <li>• Biossegurança: EPIs, higiene, descarte e prevenção.</li>
-          <li>• Preparo correto da unha natural e nivelamento.</li>
-          <li>• Aplicação da fibra e gel base.</li>
-          <li>• Curvatura, capa base, ponto de tensão e acabamento.</li>
-        </ul>
-      </div>
+    <section class="section compact"><div class="container"><span class="section-kicker reveal">Dúvidas</span><div class="faq reveal"><details><summary>É um curso para iniciantes?</summary><p>Sim. A estrutura histórica foi pensada para quem está começando e quer construir base técnica e profissional.</p></details><details><summary>Qual é o valor?</summary><p>O valor da próxima edição ainda será confirmado. Números antigos foram removidos para evitar informação desatualizada.</p></details><details><summary>Quantas horas dura?</summary><p>A carga horária da próxima edição será definida após revisão com a Jaque. O site não repete dados antigos contraditórios.</p></details><details><summary>Existe curso online disponível?</summary><p>Ainda não há produto online sendo anunciado como disponível. A frente digital faz parte da estratégia futura.</p></details></div></div></section>
+  </main>
 
-      <!-- Materiais & O que levar -->
-      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-        <h3 class="font-bold text-lg text-gray-900">Materiais & O que levar</h3>
-        <ul class="mt-3 space-y-2 text-gray-700">
-          <li>• Materiais principais disponíveis no estúdio para prática.</li>
-          <li>• Apostila digital de apoio (inclusa).</li>
-          <li>• Trazer: máscara e jaleco (se tiver), caderno para anotações.</li>
-        </ul>
-      </div>
-
-      <!-- Investimento & Pagamento -->
-      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-        <h3 class="font-bold text-lg text-gray-900">Investimento & Pagamento</h3>
-        <ul class="mt-3 space-y-2 text-gray-700">
-          <li>• Valor: <strong>R$ 000,00</strong> <span class="text-gray-400">(definir)</span></li>
-          <li>• Formas: Pix, Débito/Crédito (até 12x — ajuste se necessário).</li>
-          <li>• Bônus: <strong>Certificado de conclusão</strong> + <strong>suporte por 30 dias</strong> via WhatsApp.</li>
-        </ul>
-      </div>
-
-      <!-- Datas & Local -->
-      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-        <h3 class="font-bold text-lg text-gray-900">Datas & Local</h3>
-        <ul class="mt-3 space-y-2 text-gray-700">
-          <li>• Próximas turmas: <strong>consulte disponibilidade</strong>.</li>
-          <li>• Local: <strong>JJD Studio Beauty</strong> — (coloque o endereço exato).</li>
-          <li>• Cidade/Bairro: (ajuste aqui).</li>
-        </ul>
-      </div>
-
-      <!-- Política & Pré-requisitos -->
-      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-        <h3 class="font-bold text-lg text-gray-900">Política & Pré-requisitos</h3>
-        <ul class="mt-3 space-y-2 text-gray-700">
-          <li>• Pré-requisitos: não é necessário experiência prévia.</li>
-          <li>• Remarcação: avisar com 48h (ajuste sua regra).</li>
-          <li>• Em caso de desistência: consultar condições.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <div class="mt-10 text-center">
-      <a href="https://wa.me/5521967671257?text=Olá,%20tenho%20interesse%20no%20curso%20de%20Nail%20Designer.%20Pode%20me%20passar%20duração,%20datas%20e%20valores?"
-         target="_blank" rel="noopener"
-         class="inline-flex items-center gap-3 bg-rose-500 hover:bg-rose-600 text-white px-6 py-3 rounded-full transition shadow">
-        <i class="fa-brands fa-whatsapp text-xl"></i>
-        Falar sobre datas e valores
-      </a>
-    </div>
-  </div>
-</section>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CARGA HORÁRIA / INVESTIMENTO / TURMAS -->
-  <section class="py-8">
-    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-6">
-      <div class="bg-stone-50 rounded-xl p-5 border border-zinc-100">
-        <h4 class="font-semibold text-gray-900 mb-1">Carga horária</h4>
-        <p class="text-gray-600 text-sm">16h (2 dias) — Turmas pequenas para acompanhamento individual.</p>
-      </div>
-      <div class="bg-stone-50 rounded-xl p-5 border border-zinc-100">
-        <h4 class="font-semibold text-gray-900 mb-1">Investimento</h4>
-        <p class="text-gray-600 text-sm">R$ 790 — Parcelamento no cartão. Material básico incluso para a prática.</p>
-      </div>
-      <div class="bg-stone-50 rounded-xl p-5 border border-zinc-100">
-        <h4 class="font-semibold text-gray-900 mb-1">Próximas turmas</h4>
-        <p class="text-gray-600 text-sm">Mensais — Consulte datas disponíveis.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROGRAMA RESUMIDO -->
-  <section class="py-10">
-    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-6">
-      <div class="bg-white rounded-xl p-6 border border-zinc-100 shadow-sm">
-        <h4 class="font-semibold text-gray-900 mb-2">Conteúdo resumido</h4>
-        <ul class="text-gray-600 text-sm space-y-1">
-          <li>• Preparação da unha natural e escolha de materiais.</li>
-          <li>• Aplicação da fibra, gel base e capa base.</li>
-          <li>• Curvatura, ponto de tensão e alinhamento.</li>
-          <li>• Finalização e polimento com acabamento premium.</li>
-        </ul>
-      </div>
-      <div class="bg-white rounded-xl p-6 border border-zinc-100 shadow-sm">
-        <h4 class="font-semibold text-gray-900 mb-2">Para quem é</h4>
-        <p class="text-gray-600 text-sm">Iniciantes e profissionais que querem padronizar o serviço, reduzir retrabalho e elevar a satisfação das clientes.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ CURSO -->
-  <section class="py-12 bg-stone-50">
-    <div class="max-w-3xl mx-auto px-6">
-      <h3 class="text-2xl font-serif font-bold text-center text-gray-900">Dúvidas sobre o curso</h3>
-      <div class="space-y-3 mt-6">
-        <details class="bg-white p-4 rounded-lg shadow">
-          <summary class="font-medium cursor-pointer">Preciso levar modelo?</summary>
-          <p class="mt-2 text-gray-600">Recomendamos. Se não puder, avise com antecedência para ajuste da prática.</p>
-        </details>
-        <details class="bg-white p-4 rounded-lg shadow">
-          <summary class="font-medium cursor-pointer">Emitir certificado?</summary>
-          <p class="mt-2 text-gray-600">Sim, certificado de conclusão em versão digital.</p>
-        </details>
-        <details class="bg-white p-4 rounded-lg shadow">
-          <summary class="font-medium cursor-pointer">Política de remarcação</summary>
-          <p class="mt-2 text-gray-600">Avise com 48h. Sinal para reserva da vaga é não reembolsável.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA INSCRIÇÃO -->
-  <section id="inscricao" class="py-12 text-center">
-    <h3 class="text-2xl font-serif font-bold text-gray-900">Quer se informar?</h3>
-    <p class="text-gray-600 mt-2">Me chama no Whats para valores atualizados, próximas datas e matrícula.</p>
-    <a href="https://wa.me/5521967671257?text=Oi%20Jaque!%20Quero%20informações%20sobre%20o%20curso%20de%20Nail%20Designer%20%F0%9F%92%85"
-       target="_blank"
-       class="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full font-semibold shadow mt-4">
-      <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
-    </a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-6 text-center text-gray-500">
-    <p>&copy; <span id="year"></span> Jaqueline Lopes — Nail Designer. Todos os direitos reservados.</p>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand">Jaque Lopes</div><p>Nail Designer & Educadora • formação construída a partir de prática real.</p></div><div class="footer-links"><a class="btn btn-secondary" href="index.html" data-transition>Início</a><a class="btn btn-secondary" href="atendimento.html" data-transition>Atendimento</a><a class="btn btn-secondary" href="https://www.instagram.com/unhasporjaquelopes/" target="_blank" rel="noopener">Instagram</a></div></div><div class="footer-meta"><span>© <span data-year></span> Jaque Lopes.</span><span>Informações de oferta só entram depois de confirmadas.</span></div></div></footer>
+  <script src="assets/js/v3.js" defer></script>
 </body>
 </html>
