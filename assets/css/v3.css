@@ -66,8 +66,8 @@ p { margin: 0; }
 .hero-copy { padding-bottom: 26px; }
 .hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; color: var(--wine); text-transform: uppercase; letter-spacing: .18em; font-size: 12px; font-weight: 800; }
 .hero-eyebrow::before { content: ""; width: 42px; height: 1px; background: var(--champagne); }
-.hero-title .line { display: block; overflow: hidden; }
-.hero-title .line span { display: block; transform: translateY(110%); opacity: 0; animation: lineIn .9s var(--ease) forwards; }
+.hero-title .line { display: block; overflow: visible; }
+.hero-title .line span { display: block; transform: translateY(28px); opacity: 0; animation: lineIn .9s var(--ease) forwards; }
 .hero-title .line:nth-child(2) span { animation-delay: .12s; color: var(--wine); font-style: italic; }
 @keyframes lineIn { to { transform: translateY(0); opacity: 1; } }
 .hero-lead { max-width: 610px; margin-top: 32px; color: var(--muted); font-size: clamp(17px, 2vw, 21px); }
