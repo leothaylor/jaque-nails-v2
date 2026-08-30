@@ -74,6 +74,14 @@
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeLightbox(); });
 
   const curtain = document.querySelector('.transition-curtain');
+  const resetCurtain = () => curtain?.classList.remove('is-leaving');
+
+  // Chrome/Safari can restore a page from the back-forward cache without
+  // rerunning this script. Reset the transition overlay whenever the page
+  // becomes active again so browser Back/Forward never leaves it covering UI.
+  window.addEventListener('pageshow', resetCurtain);
+  resetCurtain();
+
   if (curtain && !prefersReduced) {
     document.querySelectorAll('a[data-transition]').forEach((link) => {
       link.addEventListener('click', (event) => {
